@@ -1,5 +1,6 @@
 public class Solution {
     /*
+        leetcode 문제: trapping-rain-water
         풀이 방법 의도: 우선 해당 맵에서 최대 높이를 기준점으로 좌와 우의 기준점을 잡아 고이는 물의 높이를 찾는다.
 
         Runtime: 1 ms, faster than 83.85% of Java online submissions for Trapping Rain Water.
