@@ -9,6 +9,8 @@ class MedianFinder {
     *   짝수일 경우에는 minPq과 maxPq의 값을 나누면 중간값이 된다.
     *   maxPq: 들어있는값들 중 최대값이 peek 여기서는 0~size/2
     *   minPq: 들어있는 값들중 최소값이 peek 여기서는 size/2+1 ~ size
+    *   Runtime: 53 ms, faster than 51.44% of Java online submissions for Find Median from Data Stream.
+        Memory Usage: 50.1 MB, less than 83.86% of Java online submissions for Find Median from Data Stream.
      */
     PriorityQueue<Integer> minPq;
     PriorityQueue<Integer> maxPq;
