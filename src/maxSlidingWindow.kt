@@ -5,11 +5,11 @@ import java.util.*
  */
 fun maxSlidingWindowWhenBruteForce(nums: IntArray, k: Int): IntArray {
     val result = mutableListOf<Int>()
-    for (i in nums.indices){
-        if (i > nums.size - k){
+    for (i in nums.indices) {
+        if (i > nums.size - k) {
             break
         }
-        val addNum = nums.filterIndexed { index, _ -> index >= i && index < i + k}.max() ?: -9999999
+        val addNum = nums.filterIndexed { index, _ -> index >= i && index < i + k }.maxOrNull() ?: -9999999
         result.add(addNum)
     }
     return result.toIntArray()
@@ -22,15 +22,15 @@ fun maxSlidingWindowWhenBruteForce(nums: IntArray, k: Int): IntArray {
 fun maxSlidingWindowWhenDeque(nums: IntArray, k: Int): IntArray {
     val dq = ArrayDeque<Int>()
     val result = mutableListOf<Int>()
-    for (i in nums.indices){
+    for (i in nums.indices) {
         dq.addLast(nums[i])
-        if(dq.size < k){
+        if (dq.size < k) {
             continue
         }
-        if(dq.size > k) {
+        if (dq.size > k) {
             dq.removeFirst()
         }
-        result.add(dq.max() ?: -999999)
+        result.add(dq.maxOrNull() ?: -999999)
     }
     return result.toIntArray()
 }
@@ -45,16 +45,16 @@ fun maxSlidingWindowWhenDeque2(nums: IntArray, k: Int): IntArray {
     val dq = ArrayDeque<Int>()
     val result = mutableListOf<Int>()
 
-    for ((index,value) in nums.withIndex()){
-        while(dq.isNotEmpty() && value > nums[dq.last]){
+    for ((index, value) in nums.withIndex()) {
+        while (dq.isNotEmpty() && value > nums[dq.last]) {
             dq.removeLast()
         }
         dq.addLast(index)
 
-        if(dq.first == index - k){
+        if (dq.first == index - k) {
             dq.removeFirst()
         }
-        if(index >= k -1){
+        if (index >= k - 1) {
             result.add(nums[dq.first])
         }
     }
@@ -62,7 +62,7 @@ fun maxSlidingWindowWhenDeque2(nums: IntArray, k: Int): IntArray {
 }
 
 fun main() {
-    val numArr = intArrayOf(1,3,-1,-3,5,3,6,7)
+    val numArr = intArrayOf(1, 3, -1, -3, 5, 3, 6, 7)
     val k = 3
     val result = maxSlidingWindowWhenBruteForce(numArr, k)
     println(result.contentToString())
