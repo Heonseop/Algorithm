@@ -1,3 +1,5 @@
+package leetcode;
+
 public class MaxProfit {
     /*
         완전 탐색: 시간초과

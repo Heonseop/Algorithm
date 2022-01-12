@@ -1,3 +1,5 @@
+package leetcode;
+
 public class MaximalRectangle {
     /*
     *   Runtime: 18 ms, faster than 13.30% of Java online submissions for Maximal Rectangle.

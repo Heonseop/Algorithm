@@ -1,3 +1,5 @@
+package leetcode;
+
 public class Solution {
     /*
         leetcode 문제: trapping-rain-water

@@ -1,3 +1,5 @@
+package leetcode;
+
 public class LargestRectangle {
     /*
         Runtime: 10 ms, faster than 57.62% of Java online submissions for Largest Rectangle in Histogram.
