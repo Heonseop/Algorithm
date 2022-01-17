@@ -2,7 +2,7 @@ package backjoon;
 
 import java.util.*;
 
-public class NQueen {
+class NQueen {
     static int N;
     static int result;
     static int [] map;
