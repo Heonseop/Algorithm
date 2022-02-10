@@ -1,4 +1,4 @@
-package backjoon
+package backjoon.`202201`
 
 import java.util.Scanner
 import java.util.ArrayList

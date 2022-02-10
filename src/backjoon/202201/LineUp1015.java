@@ -1,5 +1,3 @@
-package backjoon;
-
 import java.util.Scanner;
 import java.util.Arrays;
 class Point implements Comparable<Point>{

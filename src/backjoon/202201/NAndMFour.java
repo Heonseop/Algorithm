@@ -1,5 +1,3 @@
-package backjoon;
-
 import java.util.Scanner;
 /*
    백준 문제 : https://www.acmicpc.net/problem/15652

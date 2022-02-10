@@ -1,5 +1,3 @@
-package backjoon;
-
 import java.util.*;
 
 class NQueen {
